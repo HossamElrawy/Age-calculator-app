@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 94%);
+    font-family: "Poppins";
+    height: 960px;
+}
+main {
+    background-color: white;
+    padding: 60px 56px 49px;
+    border-radius: 20px;
+    border-bottom-right-radius: 200px;
+    width: 840px;
+    height: fit-content;
+}
+form {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    padding-bottom: 47px;
+    border-bottom: 2px solid hsl(0, 0%, 86%);
+    margin-bottom: 80px;
+}
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input-label {
+    color: hsl(0, 1%, 44%);
+    font-weight: 700;
+    font-size: 15px;
+}
+input {
+    height: 72px;
+    width: 160px;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 86%);
+    padding-left: 25px;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+    caret-color: hsl(259, 100%, 65%);
+    transition: border 0.3s ease;
+}
+input:focus {
+    outline: none;
+    border: 1px solid hsl(259, 100%, 65%);
+}
+.calculate-button {
+    width: 97px;
+    height: 97px;
+    border-radius: 96px;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: -48px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.calculate-button:hover {
+    background-color: black;
+}
+.results-div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.age-para,
+.unit-para {
+    font-weight: 700;
+    font-style: italic;
+    color: hsl(259, 100%, 65%);
+    width: fit-content;
+    font-size: 112px;
+    line-height: 140px;
+}
+.unit-para {
+    color: black;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.warn-day,
+.warn-month,
+.warn-year,
+.must-day,
+.must-month,
+.must-year {
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    font-size: 14px;
+    display: none;
+}
+.show {
+    display: block;
+}
+.warn-input,
+.must-input {
+    border: 1px solid hsl(0, 100%, 67%);
+}
+.warn-label,
+.must-label {
+    color: hsl(0, 100%, 67%);
+}
+@media (max-width : 800px) {
+    body {
+        height: 812px;
+        padding: 88px 16px 238px;
+    }
+    main {
+        padding: 48px 24px 43px;
+        border-bottom-right-radius: 95px;
+        width: 343px;
+    }
+    form {
+        gap: 16px;
+        padding-bottom: 63px;
+        margin-bottom: 70px;
+        width: 295px;
+    }
+    .input-div {
+        gap: 6px;
+    }
+    .input-label {
+        font-size: 13px;
+    }
+    input {
+        height: 54px;
+        width: 88px;
+        padding-left: 15px;
+        font-size: 16px;
+    }
+    .calculate-button {
+        width: 65px;
+        height: 65px;
+        right: auto;
+        left: 50%;
+        bottom: -32px;
+        transform: translateX(-50%);
+    }
+    .results-div {
+        gap: 8px;
+    }
+    .age-para,
+    .unit-para {
+        width: fit-content;
+        font-size: 55px;
+        line-height: 64px;
+    }
+    .warn-day,
+    .warn-month,
+    .warn-year,
+    .must-day,
+    .must-month,
+    .must-year {
+        font-size: 7.5px;
+    }
+}
